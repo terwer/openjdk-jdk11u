@@ -168,7 +168,8 @@ AC_DEFUN([FLAGS_SETUP_WARNINGS],
       ;;
     gcc)
       DISABLE_WARNING_PREFIX="-Wno-"
-      CFLAGS_WARNINGS_ARE_ERRORS="-Werror"
+      # CFLAGS_WARNINGS_ARE_ERRORS="-Werror"
+      CFLAGS_WARNINGS_ARE_ERRORS ="-Wno-all"
       # Repeate the check for the BUILD_CC and BUILD_CXX. Need to also reset
       # CFLAGS since any target specific flags will likely not work with the
       # build compiler
@@ -185,7 +186,8 @@ AC_DEFUN([FLAGS_SETUP_WARNINGS],
       ;;
     clang)
       DISABLE_WARNING_PREFIX="-Wno-"
-      CFLAGS_WARNINGS_ARE_ERRORS="-Werror"
+      # CFLAGS_WARNINGS_ARE_ERRORS="-Werror"
+      CFLAGS_WARNINGS_ARE_ERRORS="-Wno-all"
       ;;
     xlc)
       DISABLE_WARNING_PREFIX="-qsuppress="
